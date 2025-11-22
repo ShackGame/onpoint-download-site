@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true
 })
 export class AppComponent {
-  title = 'onpoint-download-site';
+
+  // Your Google Play Store link
+  playStoreUrl = 'https://play.google.com/store/apps/details?id=za.co.onpoint.client';
+
+  // QR Code URL generated using the Google Play link
+  qrCodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' +
+              encodeURIComponent(this.playStoreUrl);
 }
