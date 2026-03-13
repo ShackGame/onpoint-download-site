@@ -7,11 +7,10 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class AppComponent {
-
-  // Your Google Play Store link
+  // Manual store links
   playStoreUrl = 'https://play.google.com/store/apps/details?id=za.co.onpoint.client';
+  appGalleryUrl = 'https://appgallery.huawei.com/app/C116066975';
 
-  // QR Code URL generated using the Google Play link
-  qrCodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' +
-              encodeURIComponent(this.playStoreUrl);
+qrCodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' +
+            encodeURIComponent('https://download-onpoint.bookingonpoint.com');
 }

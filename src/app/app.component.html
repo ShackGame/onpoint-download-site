@@ -1,61 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-  <div class="container">
+<nav>
+  <img src="logo.png" alt="onPoint logo" style="height:32px; width:32px; object-fit:contain; border-radius:8px; margin-right:10px;">
+  <span class="nav-brand">onPoint<span>.</span></span>
+</nav>
 
-    <!-- Logo -->
-    <img src="logo.png" alt="Logo" class="logo">
+<div class="page">
 
-    <!-- Main Title -->
-    <h1>onPoint. Booking App</h1>
+  <div class="badge">
+    <div class="badge-dot"></div>
+    Now live in Bloemfontein
+  </div>
 
-    <!-- Subtext -->
-    <p class="subtext">
-    Skip the waiting line — get styled as soon as you arrive.  
-  We know your time matters.
-</p>
+  <h1>Book your stylist<br><span>in seconds.</span></h1>
 
+  <p class="sub">Skip the waiting line — get styled as soon as you arrive. We know your time matters.</p>
 
-    <!-- Subtitle -->
-    <p>Scan the QR code below or tap the button to download the app for Android.</p>
+  <div class="store-row">
+   <a class="store-btn" [href]="playStoreUrl" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+       alt="Get it on Google Play"
+       style="height:28px; object-fit:contain;">
+  <div class="store-btn-label">
+    <span class="store-btn-sub">Get it on</span>
+    <span class="store-btn-name">Google Play</span>
+  </div>
+</a>
+   <a class="store-btn outline" [href]="appGalleryUrl" target="_blank">
+  <img src="Badge-Black.png" alt="AppGallery" 
+       style="height:28px; object-fit:contain">
+  <div class="store-btn-label">
+    <span class="store-btn-sub">Explore on</span>
+    <span class="store-btn-name">AppGallery</span>
+  </div>
+</a>
+  </div>
 
-    <!-- QR Code -->
-    <img [src]="qrCodeUrl" alt="QR Code" width="300" height="300">
-
-    <!-- Download & Benefits Section -->
-    <div class="download-and-benefits">
-
-      <!-- Google Play Button -->
-      <a class="google-play-btn" [href]="playStoreUrl" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
-             alt="Get it on Google Play">
-      </a>
-
-      <!-- Benefits -->
-      <div class="benefits-block">
-        <h3 class="benefits-title">
-          <span class="benefits-icon">✨</span> What's in it for you?
-        </h3>
-
-        <div class="benefits-container">
-          <div class="benefit-column">
-            <p>✓ Skip the waiting line</p>
-            <p>✓ Book appointments 24/7</p>
-            <p>✓ Easy rescheduling</p>
-          </div>
-          <div class="benefit-column">
-            <p>✓ Get styled on arrival</p>
-            <p>✓ Secure payment options</p>
-            <p>✓ Exclusive member rewards</p>
+  <div class="phone-wrap">
+    <div class="phone-frame">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="phone-header">My Bookings</div>
+        <div class="phone-card">
+          <div class="phone-status"><div class="status-dot"></div>Confirmed</div>
+          <div style="margin-top:8px;">
+            <div class="phone-card-name">Glamour Studio</div>
+            <div class="phone-card-sub">Today · 10:00 AM · Sarah M.</div>
+            <div class="phone-card-sub" style="color:rgba(255,255,255,0.6); font-size:11px;">Pay on arrival: R250</div>
           </div>
         </div>
+        <div class="phone-card">
+          <div class="phone-card-name">Available Slots — Fri 14 Mar</div>
+          <div class="phone-card-sub">Select your time</div>
+          <div class="phone-slot-row">
+            <div class="slot">8:00</div>
+            <div class="slot">8:30</div>
+            <div class="slot booked">9:00</div>
+            <div class="slot">9:30</div>
+            <div class="slot booked">10:00</div>
+            <div class="slot">10:30</div>
+            <div class="slot">11:00</div>
+            <div class="slot booked">11:30</div>
+          </div>
+          <div class="phone-btn">Book Now</div>
+        </div>
       </div>
-
     </div>
-
-    <!-- Slogan -->
-    <h2 class="slogan">Never Wait, Never Late.</h2>
-
   </div>
-</body>
-</html>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title">Instant booking</div>
+      <div class="feature-desc">Book any stylist in seconds, 24/7 from your phone.</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📅</div>
+      <div class="feature-title">Easy rescheduling</div>
+      <div class="feature-desc">Plans changed? Reschedule up to 1 hour before your appointment.</div>
+    </div>
+    <div class="feature">
+  <div class="feature-icon">🏪</div>
+  <div class="feature-title">All in one place</div>
+  <div class="feature-desc">Salons, barbers, spas, tattoo studios and more — all on one platform.</div>
+</div>
+  </div>
+
+  <div class="qr-row">
+    <div class="qr-box">
+      <img [src]="qrCodeUrl" alt="QR Code">
+    </div>
+    <div class="qr-text">
+      <div class="qr-title">Scan to download</div>
+      <div class="qr-sub">Point your camera at the QR code<br>to download onPoint for Android.</div>
+    </div>
+  </div>
+
+  <div class="footer">Never Wait.</div>
+
+</div>
